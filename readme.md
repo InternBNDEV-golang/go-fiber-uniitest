@@ -39,9 +39,10 @@ podman run --rm -it -p 3000:3000 fiber-test
 ```
 
 # Write Unittest
-- go to file go-unit-tester/unittester.go
+- create test case function in `unittest/test` folder
+- then call function test case in `unittest/unittest.go`
 
 # Run Unittest
 ```
-go test -v main_test.go
+go test -v unittest_test.go
 ```

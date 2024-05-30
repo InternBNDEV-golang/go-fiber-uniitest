@@ -13,6 +13,7 @@ require (
 )
 
 require (
+	github.com/JohnFarmers/go-unit-tester v1.0.0 // indirect
 	github.com/MicahParks/keyfunc/v2 v2.1.0 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
