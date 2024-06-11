@@ -9,11 +9,11 @@ import (
 )
 
 func RunTestUserService(sv sv.IUsersService){
-	test.TestCaseGetAllUserStatusOK(sv0)
-	test.TestCaseInsertNewAccountEmptyERROR(sv0)
-	test.TestCaseInsertNewAccountStatusOK(sv0)
-	test.TestCaseInsertNewAccountNotUserID(sv0)
-	test.TestCaseInsertNewAccountNotEmail(sv0)
+	TestCaseGetAllUserStatusOK(sv)
+	TestCaseInsertNewAccountEmptyERROR(sv)
+	TestCaseInsertNewAccountStatusOK(sv)
+	TestCaseInsertNewAccountNotUserID(sv)
+	TestCaseInsertNewAccountNotEmail(sv)
 
 }
 
