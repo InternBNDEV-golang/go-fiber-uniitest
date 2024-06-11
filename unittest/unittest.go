@@ -21,9 +21,6 @@ func init() {
 
 	sv0 := sv.NewUsersService(userMongo)
 
-	test.TestCaseGetAllUserStatusOK(sv0)
-	test.TestCaseInsertNewAccountEmptyERROR(sv0)
-	test.TestCaseInsertNewAccountStatusOK(sv0)
-	test.TestCaseInsertNewAccountNotUserID(sv0)
-	test.TestCaseInsertNewAccountNotEmail(sv0)
+	test.RunTestUserService(sv0)
+
 }

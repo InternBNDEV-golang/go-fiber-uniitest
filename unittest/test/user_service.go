@@ -8,6 +8,15 @@ import (
 	t "github.com/JohnFarmers/go-unit-tester"
 )
 
+func RunTestUserService(sv sv.IUsersService){
+	test.TestCaseGetAllUserStatusOK(sv0)
+	test.TestCaseInsertNewAccountEmptyERROR(sv0)
+	test.TestCaseInsertNewAccountStatusOK(sv0)
+	test.TestCaseInsertNewAccountNotUserID(sv0)
+	test.TestCaseInsertNewAccountNotEmail(sv0)
+
+}
+
 func TestCaseGetAllUserStatusOK(sv sv.IUsersService) {
 	fmt.Printf("TestCaseGetAllUserStatusOK : ")
 	input := []interface{}{}
