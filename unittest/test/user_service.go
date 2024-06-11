@@ -22,8 +22,8 @@ func TestCaseGetAllUserStatusOK(sv sv.IUsersService) {
 	input := []interface{}{}
 	expected := []interface{}{[]entities.UserDataFormat{}, nil}
 	checkOutputTypeOnly := true
-
-	t.UnitTest(sv.GetAllUser, expected, input, checkOutputTypeOnly)
+	detailedPassLog := true
+	t.UnitTest(sv.GetAllUser, expected, input, checkOutputTypeOnly,detailedPassLog)
 }
 func TestCaseInsertNewAccountEmptyERROR(sv sv.IUsersService) {
 	fmt.Println("TestCaseInsertNewAccountAccountEmptyERROR :  ")
@@ -35,8 +35,8 @@ func TestCaseInsertNewAccountEmptyERROR(sv sv.IUsersService) {
 	input := []interface{}{data}
 	expected := []interface{}{false}
 	checkOutputTypeOnly := false
-
-	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly)
+	detailedPassLog := true
+	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly,detailedPassLog)
 }
 
 func TestCaseInsertNewAccountStatusOK(sv sv.IUsersService) {
@@ -49,8 +49,9 @@ func TestCaseInsertNewAccountStatusOK(sv sv.IUsersService) {
 	input := []interface{}{data}
 	expected := []interface{}{true}
 	checkOutputTypeOnly := false
+	detailedPassLog := true
 
-	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly)
+	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly,detailedPassLog)
 }
 
 func TestCaseInsertNewAccountNotUserID(sv sv.IUsersService) {
@@ -63,8 +64,9 @@ func TestCaseInsertNewAccountNotUserID(sv sv.IUsersService) {
 	input := []interface{}{data}
 	expected := []interface{}{false}
 	checkOutputTypeOnly := false
+	detailedPassLog := true
 
-	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly)
+	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly,detailedPassLog)
 }
 func TestCaseInsertNewAccountNotEmail(sv sv.IUsersService) {
 	fmt.Println("TestCaseInsertNewAccountNotEmail :  ")
@@ -76,6 +78,7 @@ func TestCaseInsertNewAccountNotEmail(sv sv.IUsersService) {
 	input := []interface{}{data}
 	expected := []interface{}{false}
 	checkOutputTypeOnly := false
+	detailedPassLog := true
 
-	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly)
+	t.UnitTest(sv.InsertNewAccount, expected, input, checkOutputTypeOnly,detailedPassLog)
 }
