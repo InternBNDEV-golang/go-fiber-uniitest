@@ -44,5 +44,5 @@ podman run --rm -it -p 3000:3000 fiber-test
 
 # Run Unittest
 ```
-go test -v unittest_test.go
+go test -v
 ```
